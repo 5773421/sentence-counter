@@ -1,0 +1,9 @@
+{  
+  "routes": [
+    { "src": "/", "dest": "/index.html" },  
+    { "src": "/about", "dest": "/about.html" },  
+    { "src": "/terms", "dest": "/terms.html" },  
+    { "src": "/speak", "dest": "/speak.html" },  
+    { "src": "/privacy-policy", "dest": "/privacy-policy.html" }  
+  ]
+}
