@@ -6,6 +6,26 @@
     <title>Sentence Counter: Free Online Sentence Counter Tool</title>
     <meta name="keywords" content="sentence counter, sentence of count, sentences counter, online sentence counter, sentence count, count sentences online" />    
     <meta name="description" content="Easily track your document's sentence count with our free online sentence counter tool. Perfect for students, writers and professionals who need accurate sentence counts instantly.">
+    <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "Product",
+          "image": [
+              "https://example.com/photos/1x1/photo.jpg"
+          ],
+          "name": "Sentence Counter Tool",
+          "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+          },
+          "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.7",
+              "ratingCount": "76"
+          }
+      }
+    </script>
     <style>
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -110,6 +130,35 @@
         .navbar-links a:hover {
             background-color: #0056b3;
         }
+
+        /* Responsive adjustments */
+    @media (max-width: 768px) {
+        body {
+            padding: 10px;
+        }
+
+        .container, .faq {
+            padding: 20px;
+            width: 95%;
+        }
+
+        .navbar, .navbar-links {
+            flex-direction: column;
+        }
+
+        .navbar-links a {
+            padding: 8px;
+            font-size: 15px;
+        }
+
+        h1, h2 {
+            font-size: 18px; /* Adjust font size for smaller screens */
+        }
+
+        select, textarea, button {
+            padding: 8px; /* Adjust form elements for easier interaction on touch devices */
+        }
+    }
     </style>
 </head>
 <body>

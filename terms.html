@@ -6,136 +6,148 @@
     <title>Sentence Counter: Free Online Sentence Counter Tool</title>
     <meta name="keywords" content="sentence counter, sentence of count, sentences counter, online sentence counter, sentence count, count sentences online" />    
     <meta name="description" content="Easily track your document's sentence count with our free online sentence counter tool. Perfect for students, writers and professionals who need accurate sentence counts instantly.">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Product",
+            "image": [
+                "https://example.com/photos/1x1/photo.jpg"
+            ],
+            "name": "Sentence Counter Tool",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.7",
+                "ratingCount": "76"
+            }
+        }
+    </script>
     <style>
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container, .faq {
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        padding: 20px;
+        max-width: 100%;
+        width: 90%; /* Adjust width for mobile */
+        margin: 10px 0;
+    }
+
+    h1, h2 {
+        text-align: center;
+        color: #007bff;
+    }
+
+    select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        opacity: 0.9;
+    }
+
+    .results, .result {
+        margin-top: 20px;
+    }
+
+    .faq h2, .question h2 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        color: #333;
+        text-align: left;
+    }
+
+    .question p {
+        margin-top: 5px;
+    }
+
+    .navbar {
+        width: 100%;
+        background-color: #007bff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        min-height: 44px;
+    }
+
+    .navbar .logo {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .navbar-links a {
+        color: white;
+        text-decoration: none;
+        padding: 12px;
+        font-size: 17px;
+    }
+
+    .navbar-links a:hover {
+        background-color: #0056b3;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        body {
+            padding: 10px;
         }
 
         .container, .faq {
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            padding: 40px;
-            max-width: 800px;
-            width: 100%;
-            margin: 20px 0;
+            padding: 20px;
+            width: 95%;
         }
 
-        h1, h2 {
-            text-align: center;
-            color: #007bff;
-        }
-
-        select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        button:hover {
-            opacity: 0.9;
-        }
-
-        .results {
-            margin-top: 20px;
-        }
-
-        .result {
-            margin-bottom: 10px;
-        }
-
-        .faq h2 {
-            margin-bottom: 20px;
-        }
-
-        .question h2 {
-            margin-top: 20px;
-            color: #333;
-            text-align: left;
-        }
-
-        .question p {
-            margin-top: 5px;
-        }
-
-        .navbar {
-            width: 100%;
-            background-color: #007bff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .navbar .logo {
-            color: white;
-            font-size: 20px;
-            text-decoration: none;
-        }
-
-        .navbar-links {
-            display: flex;
-            justify-content: flex-end;
+        .navbar, .navbar-links {
+            flex-direction: column;
         }
 
         .navbar-links a {
-            color: white;
-            text-decoration: none;
-            padding: 12px;
-            font-size: 17px;
+            padding: 8px;
+            font-size: 15px;
         }
 
-        .navbar-links a:hover {
-            background-color: #0056b3;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
         h1, h2 {
-            color: #333;
+            font-size: 18px; /* Adjust font size for smaller screens */
         }
-        p {
-            margin: 10px 0;
+
+        select, textarea, button {
+            padding: 8px; /* Adjust form elements for easier interaction on touch devices */
         }
-        .disclaimer, .use-of-cookies, .user-content, .hyperlinking, .linking, .removal, .liability, .modification, .governing {
-            background-color: #fff;
-            width: 100%;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        .important {
-            color: #d63447;
-            font-weight: bold;
-        }
+    }
     </style>
 </head>
 <body>
