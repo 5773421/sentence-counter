@@ -32,20 +32,20 @@
             background-color: #f5f5f5;
             color: #333;
             margin: 0;
-            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            max-width: 100%;
         }
 
         .container, .faq {
             background-color: #ffffff;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             border-radius: 8px;
-            padding: 40px;
+            padding: 0 40px;
             max-width: 800px;
-            width: 100%;
+            min-width: 60%;
             margin: 20px 0;
         }
 
@@ -80,6 +80,9 @@
 
         .results {
             margin-top: 20px;
+            font-size: 16px;
+            font-family: "Work Sans", sans-serif;
+            font-weight: 700;
         }
 
         .result {
@@ -101,12 +104,11 @@
         }
 
         .navbar {
-            width: 100%;
             background-color: #007bff;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 20px;
+            width: 100%;
         }
 
         .navbar .logo {
@@ -151,16 +153,16 @@
     </div>
     <div class="container">
         <h1>Free Online Sentence Counter Tool</h1>
-        <select id="languageSelect">
+        <select id="languageSelect" onchange="analyzeText()">
             <option value="en">English</option>
             <option value="zh">Chinese (中文)</option>
             <option value="es">Spanish (Español)</option>
             <option value="fr">French (Français)</option>
             <option value="jp">Japanese (日本語)</option>
         </select>
-        <textarea id="textInput" rows="8" placeholder="Enter your text here..."></textarea>
-        <button onclick="analyzeText()">Count Sentences</button>
-        <button onclick="resetText()">Reset</button>
+        <textarea id="textInput" rows="8" oninput="analyzeText()" placeholder="Enter your text here..."></textarea>
+        <!-- <button onclick="analyzeText()">Count Sentences</button> -->
+        <button onclick="resetText()">Clear</button>
         <div class="results">
             <div id="sentenceCount" class="result">Sentences: 0</div>
             <div id="wordCount" class="result">Words: 0</div>
@@ -181,11 +183,7 @@
         <div class="question">
             <h2>How does the sentence counter work?</h3>
             <p> Use our free online sentence counter tool to easily count the number of sentences, words, and characters in your text.
-                Sentence counter generally works by analyzing a block of text and identifying the boundaries of individual sentences. It counts how many sentences there are based on punctuation marks that typically end sentences—like periods, exclamation points, and question marks—and sometimes other criteria. Here’s a basic outline of how a typical sentence counter might function: 
-                Input Text: The counter receives a text input that it needs to analyze.
-                Sentence Delimiters: It identifies sentence boundaries using specific punctuation marks. Most counters primarily look for periods, exclamation marks, and question marks. Advanced models might also consider abbreviations, numbers, quotations, and other punctuation complexities to avoid false sentence breaks.
-                Counting Mechanism: Once it identifies these boundaries, the counter increments its count for each detected sentence ending.
-                Output: The final count of sentences is presented as the output.
+                Sentence counter generally works by analyzing a block of text and identifying the boundaries of individual sentences. It counts how many sentences there are based on punctuation marks that typically end sentences—like periods, exclamation points, and question marks—and sometimes other criteria.
             </p>
         </div>
         <div class="question">
